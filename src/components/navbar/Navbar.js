@@ -28,8 +28,16 @@ const Navbar = () => {
       if (subIndex < phrases[mainIndex].length) {
         wordRef.current = wordRef.current + phrases[mainIndex][subIndex];
         setSubIndex((subIndex) => subIndex + 1);
+      } else if (subIndex == phrases[mainIndex].length) {
+        setTimeout(() => {
+          wordRef.current = wordRef.current.slice(
+            0,
+            wordRef.current.length - 1
+          );
+          setSubIndex((subIndex) => subIndex + 1);
+        }, 1500);
       } else if (
-        subIndex >= phrases[mainIndex].length &&
+        subIndex > phrases[mainIndex].length &&
         subIndex < phrases[mainIndex].length * 2
       ) {
         wordRef.current = wordRef.current.slice(0, wordRef.current.length - 1);
@@ -45,7 +53,7 @@ const Navbar = () => {
 
     setTimeout(() => {
       typeLetter();
-    }, 200);
+    }, 100);
   }, [subIndex]);
 
   return (
