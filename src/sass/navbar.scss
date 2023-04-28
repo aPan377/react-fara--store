@@ -103,8 +103,8 @@
       height: 0;
       overflow: hidden;
       transition: all 0.3s;
-      background-color: rgba(colors.$pink, 0.8);
-      color: colors.$fontWhite;
+      background-color: rgba(colors.$bgLightBlue, 1);
+      color: colors.$bgBlack;
       &__sub {
         display: flex;
         flex-direction: row-reverse;
@@ -136,12 +136,12 @@
               padding-inline: indents.$p5;
               a {
                 cursor: pointer;
-                color: colors.$fontWhite;
+                color: colors.$bgBlack;
                 transition: all 0.3s;
                 position: relative;
                 &::after {
                   content: "";
-                  background-color: colors.$fontWhite;
+                  background-color: colors.$bgBlack;
                   width: 100%;
                   height: 2px;
                   transform: scaleX(0);
@@ -218,16 +218,15 @@
     &__search {
       display: flex;
       justify-content: end;
-      padding-block: indents.$p15;
+      margin-block: 15px;
+      height: indents.$p30;
 
       div {
         display: flex;
         align-items: center;
         gap: 10px;
         border-bottom: 1px solid colors.$fontGrey;
-        padding-block: indents.$p5;
         font-size: 1.3rem;
-        height: auto;
         &:focus-within {
           background-color: colors.$bgWhite;
           border-bottom: none;
@@ -338,28 +337,31 @@
 
   &__navigation {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: indents.$p50;
-    padding-block: indents.$p15;
     padding-inline: indents.$p25;
     background-color: colors.$bgGrey;
-    height: fit-content;
+    min-height: indents.$p50;
     nav {
       display: flex;
-      align-content: center;
+      align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: indents.$p15;
       font-size: 0.9rem;
       transition: flex-wrap 1s;
       height: fit-content;
-      margin-top: indents.$p5;
 
       a {
         cursor: pointer;
         color: colors.$bgBlack;
         transition: all 0.3s;
         position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-inline: indents.$p10;
+        padding-block: indents.$p15;
         &::after {
           content: "";
           background-color: colors.$bgBlack;
@@ -368,11 +370,12 @@
           transform: scaleX(0);
           position: absolute;
           left: 0;
-          bottom: -10px;
+          bottom: 0;
           transition: all 0.3s;
         }
         &:hover {
           color: colors.$bgBlack;
+          background-color: colors.$fontGrey;
           &::after {
             transform: scaleX(1);
           }
@@ -380,15 +383,12 @@
       }
     }
     &__search {
-      height: fit-content;
       div {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: indents.$p10;
         border-bottom: 1px solid colors.$fontGrey;
-        padding-block: indents.$p5;
         font-size: 1.3rem;
-        height: auto;
 
         &:focus-within {
           background-color: colors.$bgWhite;
@@ -421,6 +421,7 @@
           outline: none;
           border: none;
           background-color: colors.$bgGrey;
+          padding-block: indents.$p10;
         }
       }
     }
