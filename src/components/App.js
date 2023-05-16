@@ -1,9 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-import "../sass/app.scss";
-
+/* Components */
 import Navbar from "./navbar/Navbar";
 import HomeHeaderBanner from "./banners/HomeHeaderBanner";
+import BrandSlider from "./brandSlider/BrandSlider";
+
+import "../sass/app.scss";
 
 function App() {
   return (
@@ -11,20 +13,24 @@ function App() {
       {/* Navbar */}
       <Navbar />
       {/* Image banner */}
-      <HomeHeaderBanner />
-      {/* Product Slider */} {/* Brand Slider */} {/* 48H promo */}{" "}
+      <HomeHeaderBanner /> 
+      {/* Brand Slider */}
+      <BrandSlider />
+      {/* Product Slider */}
+      {/* 48H promo */}
       {/* Guess Brand */}
-      {/* New Brands */} {/* Tommy Hilfiger Brand */} {/* Columbia Brand */}{" "}
-      {/* Spring
-      Time Store */}{" "}
-      {/* Sister Hood + Slider */} {/* New Collection Medicine */}{" "}
-      {/*
-      G-Star Raw */}{" "}
-      {/* Mayoral Promo */} {/* Inspired by Spring */}{" "}
-      {/* Unique Brand
-      Stores */}{" "}
-      {/* Subscribe form */
-      /* Footer */}
+      {/* New Brands */} 
+      {/* Tommy Hilfiger Brand */} 
+      {/* Columbia Brand */}
+      {/* Spring Time Store */}
+      {/* Sister Hood + Slider */}
+      {/* New Collection Medicine */}
+      {/*G-Star Raw */}
+      {/* Mayoral Promo */}
+      {/* Inspired by Spring */}
+      {/* Unique Brand Stores */}
+      {/* Subscribe form */}
+      {/* Footer */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../../sass/banners/homeHeadBanner.scss";
-import bannerImg from "../../assets/home_header_banner.jpg";
+import bannerImg from "../../assets/banners/home_header_banner.jpg";
 
 const HomeHeaderBanner = () => {
   return (

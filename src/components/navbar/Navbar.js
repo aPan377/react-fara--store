@@ -12,7 +12,6 @@ const Navbar = () => {
   const [subIndex, setSubIndex] = useState(0);
   const inputSearchRef = useRef(null);
 
-  //const phrase = "Куртка";
   const phrases = [
     "Куртка",
     "Кросівки",
