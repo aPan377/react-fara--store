@@ -98,7 +98,7 @@
 
     &__main {
       &[aria-expanded="true"] {
-        height: 310px;
+        height: 320px;
       }
       height: 0;
       overflow: hidden;
@@ -340,7 +340,7 @@
     align-items: center;
     justify-content: space-between;
     gap: indents.$p50;
-    padding-inline: indents.$p25;
+    padding-inline: indents.$p15;
     background-color: colors.$bgGrey;
     min-height: indents.$p50;
     nav {
